@@ -1,0 +1,21 @@
+type List struct {
+Sizes []Size json:"sizes"
+}
+
+type Size struct {
+navID string json:"navid"
+}
+
+sizeList := make([]string, 0, 25)
+sizes := strings.Split(string(body), hits":[)[1]
+sizes = strings.Split(sizes, ],"nbHits)[0]
+var data List
+if err := json.Unmarshal([]byte(sizes), &data); err != nil {
+log.Fatal(err)
+}
+
+for _, item := range List.Sizes {
+sizeList = append(sizeList, item.navID)
+}
+
+log.Println(sizeList)
